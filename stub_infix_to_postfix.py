@@ -2,7 +2,7 @@ def infix_to_postfix(expression):
     precedence = {'+': 1, '-': 1, '*': 2, '/': 2, '^': 3}
     operators = set(precedence.keys())
     stack = []  # Stack to hold operators and parentheses
-    output = []  # List to build the output postfix expression
+    output = []  # For the output postfix expression
 
     def is_operator(token):
         return token in operators
@@ -23,7 +23,7 @@ def infix_to_postfix(expression):
             while stack and stack[-1] != '(':
                 output.append(stack.pop())
             if stack and stack[-1] == '(':
-                stack.pop()  # Remove '(' from stack
+                stack.pop()  
 
     tokens = expression.split()
     for token in tokens:

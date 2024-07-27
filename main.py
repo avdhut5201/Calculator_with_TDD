@@ -34,7 +34,7 @@ def remove_brackets(expression):
     # Define the brackets to remove
     brackets = set("(){}[]")
     
-    # Use a list comprehension to filter out the brackets
+    #  List comprehension to filter out the brackets
     result = ''.join([char for char in expression if char not in brackets])
     
     return result
@@ -78,7 +78,7 @@ def infix_to_postfix(expression):
     precedence = {'+': 1, '-': 1, '*': 2, '/': 2, '^': 3}
     operators = set(precedence.keys())
     stack = []  # Stack to hold operators and parentheses
-    output = []  # List to build the output postfix expression
+    output = []  # For the output postfix expression
 
     def is_operator(token):
         return token in operators
